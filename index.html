@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Blog de Recetas Deliciosas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">Recetas con Sabor</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#recetas-destacadas">Recetas</a></li>
+                    <li><a href="#ia-interactiva">Pregunta a la IA</a></li> <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2 class="hero-title">Descubre el Placer de Cocinar.</h2>
+            <p class="hero-subtitle">Recetas fáciles y deliciosas para cada momento. ¡Explora y Sazona Tu Vida!</p>
+            <a href="#recetas-destacadas" class="btn btn-primary">Ver Recetas</a>
+        </div>
+    </section>
+
+    <section id="recetas-destacadas" class="featured-recipes">
+        <div class="container">
+            <h2 class="section-title">Nuestras Recetas Destacadas</h2>
+            <div class="recipe-cards-container">
+                <article class="recipe-card">
+                    <img src="imagenes/sptomate.jpg" alt="Sopa Cremosa de Tomate" class="recipe-image">
+                    <div class="recipe-info">
+                        <h3 class="recipe-title">Sopa Cremosa de Tomate</h3>
+                        <p class="recipe-description">Una deliciosa sopa cremosa, perfecta para un día frío o como entrada ligera. ¡Un clásico reconfortante!</p>
+                        <a href="#" class="btn btn-secondary">Ver Receta</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <img src="imagenes/pescado.jpg" alt="Tacos de Pescado Baja Style" class="recipe-image">
+                    <div class="recipe-info">
+                        <h3 class="recipe-title">Tacos de Pescado Baja Style</h3>
+                        <p class="recipe-description">Frescos y llenos de sabor, estos tacos de pescado te transportarán a la costa con cada bocado. ¡Fáciles de hacer!</p>
+                        <a href="#" class="btn btn-secondary">Ver Receta</a>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <img src="imagenes/brow.jpg" alt="Brownies de Chocolate Esponjosos" class="recipe-image">
+                    <div class="recipe-info">
+                        <h3 class="recipe-title">Brownies de Chocolate Esponjosos</h3>
+                        <p class="recipe-description">El postre perfecto para los amantes del chocolate. Suaves por dentro y con una costra crujiente por fuera.</p>
+                        <a href="#" class="btn btn-secondary">Ver Receta</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="ia-interactiva" class="ia-section">
+        <div class="container">
+            <h2 class="section-title">Pregúntale a nuestra IA sobre Ingredientes</h2>
+            <div class="ia-input-area">
+                <input type="text" id="ia-prompt-input" placeholder="Ej: 'dame un dato curioso sobre el aguacate'" class="ia-input">
+                <button id="ia-submit-btn" class="btn btn-primary">Preguntar a la IA</button>
+            </div>
+            <div id="ia-resultado" class="ia-output-box">
+                <p>La inteligencia artificial está lista para responder tus curiosidades culinarias.</p>
+            </div>
+            <div id="ia-error" class="ia-error-message"></div>
+            <div id="ia-loading" class="ia-loading-message" style="display:none;">Cargando respuesta...</div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us-section">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <p>En "Recetas con Sabor", nuestra pasión es explorar el mundo culinario y compartir contigo las recetas más deliciosas y fáciles de preparar. Creemos que cocinar es un acto de amor y queremos inspirarte a crear momentos memorables en tu cocina.</p>
+            <p>Desde platos tradicionales hasta innovadoras creaciones, nuestro objetivo es que cada receta sea una aventura de sabor para ti y tus seres queridos. ¡Bienvenido a nuestra comunidad de amantes de la comida!</p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Recetas con Sabor. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/tupagina" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/tucuentadeinstagram" target="_blank">Instagram</a>
+                <a href="https://www.pinterest.com/tucuentadepinterest" target="_blank">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
