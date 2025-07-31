@@ -1,0 +1,429 @@
+/* Variables CSS para una paleta de colores vibrantes y cálidos */
+:root {
+    --color-primary: #8DECB4; /* Verde Menta Suave */
+    --color-secondary: #FFC72C; /* Amarillo Vibrante / Naranja Sol */
+    --color-accent: #FF6961; /* Rojo Cereza Vibrante */
+    --color-background-light: #FDFCEF; /* Crema/Beige Cálido */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-btn-hover: #FFD900; /* Amarillo para hover del botón primario */
+    --color-card-border: #E0E0E0; /* Gris claro para bordes de tarjetas */
+}
+
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-btn-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Header */
+.main-header {
+    background-color: var(--color-text-dark); /* Fondo oscuro para contraste */
+    color: var(--color-text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividad en móviles */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.logo a {
+    color: var(--color-text-light);
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--color-text-light);
+    font-weight: normal;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    /* La ruta ahora apunta a la carpeta 'imagenes' */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imagenes/ftmain.jpg') no-repeat center center/cover;
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 100px 20px;
+    height: 500px; /* Altura fija para el banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Secciones Generales */
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+}
+
+/* Recetas Destacadas */
+.featured-recipes {
+    padding: 60px 0;
+    background-color: var(--color-background-light);
+}
+
+.recipe-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.recipe-card {
+    background-color: var(--color-text-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-card-border);
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.recipe-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+}
+
+.recipe-description {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 40px; /* Para mantener la altura de la tarjeta consistente */
+}
+
+/* Sección Sobre Nosotros - Mejorada */
+.about-us-section {
+    padding: 80px 0; /* Aumentar el padding para más espacio vertical */
+    background-color: var(--color-background-light); /* Usar la variable para consistencia */
+    text-align: center;
+    position: relative; /* Necesario para pseudos-elementos o fondos complejos */
+    overflow: hidden; /* Para asegurar que los elementos hijos no se salgan */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05); /* Sombra sutil en la parte superior */
+}
+
+.about-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Patrón de puntos SVG sutil */
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23e8e8e8" fill-opacity="0.2"%3E%3Cpath d="M36 34.25V33h2v1.25h-2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zm-2 0V33h-2v1.25h2zM28 26.25V25h2v1.25h-2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zM28 18.25V17h2v1.25h-2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zM28 10.25V9h2v1.25h-2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zM36 26.25V25h2v1.25h-2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zM36 18.25V17h2v1.25h-2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zM36 10.25V9h2v1.25h-2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zM36 2.25V1h2v1.25h-2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zM4 .25V-1h2v1.25H4zM20 2.25V1h2v1.25h-2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zm-2 0V1h-2v1.25h2zM4 10.25V9h2v1.25H4zm0 8V17h2v1.25H4zm0 8V25h2v1.25H4zM20 10.25V9h2v1.25h-2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zm-2 0V9h-2v1.25h2zM20 18.25V17h2v1.25h-2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zm-2 0V17h-2v1.25h2zM20 26.25V25h2v1.25h-2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zm-2 0V25h-2v1.25h2zM4 34.25V33h2v1.25H4zM12 .25V-1h2v1.25h-2zm0 8V7h2v1.25h-2zm0 8V15h2v1.25h-2zm0 8V23h2v1.25h-2zm0 8V31h2v1.25h-2zM28 .25V-1h2v1.25h-2zm0 8V7h2v1.25h-2zm0 8V15h2v1.25h-2zm0 8V23h2v1.25h-2zm0 8V31h2v1.25h-2zM44 .25V-1h2v1.25h-2zm0 8V7h2v1.25h-2zm0 8V15h2v1.25h-2zm0 8V23h2v1.25h-2zm0 8V31h2v1.25h-2z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.5; /* Ajusta la opacidad para que no distraiga demasiado */
+    z-index: 0; /* Asegura que esté detrás del contenido */
+}
+
+.about-us-section .container {
+    position: relative; /* Para que el contenido esté sobre el pseudoelemento */
+    z-index: 1;
+}
+
+.about-us-section .section-title {
+    color: var(--color-accent); /* Cambiar el color del título para que resalte más */
+    margin-bottom: 30px;
+    font-size: 2.8em; /* Un poco más grande */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    position: relative;
+    display: inline-block; /* Para que el borde de abajo se ajuste al texto */
+}
+
+.about-us-section .section-title::after {
+    content: '';
+    display: block;
+    width: 60px; /* Longitud de la línea bajo el título */
+    height: 4px; /* Grosor de la línea */
+    background-color: var(--color-secondary); /* Color de la línea */
+    margin: 15px auto 0 auto; /* Centrar y separar del texto */
+    border-radius: 2px;
+}
+
+.about-us-section p {
+    max-width: 900px; /* Ampliar un poco más el ancho del texto */
+    margin: 0 auto 25px auto; /* Aumentar el margen inferior entre párrafos */
+    font-size: 1.2em; /* Un poco más grande para mejor legibilidad */
+    line-height: 1.8; /* Mayor interlineado para facilitar la lectura */
+    color: var(--color-text-dark); /* Color de texto estándar */
+    transition: transform 0.3s ease-out; /* Pequeña transición al párrafo */
+}
+
+/* Sección de la IA */
+.ia-section {
+    padding: 60px 0;
+    background-color: #F8F8F8; /* Un color de fondo suave */
+    text-align: center;
+}
+
+.ia-input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px; /* Espacio entre el input y el botón */
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+}
+
+.ia-input {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ia-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(141, 235, 180, 0.3); /* Un ligero resplandor */
+}
+
+.ia-output-box {
+    background-color: var(--color-text-light);
+    border: 1px solid var(--color-card-border);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 40px;
+    min-height: 100px; /* Para que tenga una altura mínima */
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ia-output-box p {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+}
+
+.ia-error-message {
+    color: var(--color-accent); /* Rojo para errores */
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.ia-loading-message {
+    color: #666;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main-footer .social-links a {
+    color: var(--color-text-light);
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-footer .social-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .recipe-cards-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    /* Media Queries para responsividad de la IA section */
+    .ia-input-area {
+        flex-direction: column;
+    }
+    .ia-input {
+        width: 80%;
+    }
+
+    /* Media Queries específicas para la sección "Sobre Nosotros" en móviles */
+    .about-us-section {
+        padding: 50px 20px; /* Reducir padding en móviles */
+    }
+    .about-us-section .section-title {
+        font-size: 2.2em;
+    }
+    .about-us-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .recipe-info {
+        padding: 15px;
+    }
+}
